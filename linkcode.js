@@ -17,16 +17,16 @@ function addTask(){                                 /*the task adding function u
     saveData();                                     /*saving data*/
 }
 
-listContainer.addEventListener("click", function(e){  /*the check and cross function. e is a mouse event, or a click. cant place other parameters.*/
-    if(e.target.tagName === "LI"){
-        e.target.classList.toggle("checked");         /*toggle function to check and uncheck if click is over list element*/
-        saveData();                                   /*saving data*/
-    }
-    else if(e.target.tagName === "SPAN"){             
-        e.target.parentElement.remove()               /*removes the entry if the click is over span element*/
-        saveData();                                   /*saving data*/
-    }
-}, false)
+listContainer.addEventListener("click", function (e) {
+        if (e.target.tagName === "LI") {
+            e.target.classList.toggle("checked"); /*toggle function to check and uncheck if click is over list element*/
+            saveData(); /*saving data*/
+        }
+        else if (e.target.tagName === "SPAN") {
+            e.target.parentElement.remove(); /*removes the entry if the click is over span element*/
+            saveData(); /*saving data*/
+        }
+    }, false)
 
 function saveData(){                                /* saves the data in local storage, in a variable stored_data so that once the webpage is refreshed it doesnt get lost*/
     localStorage.setItem("stored_data", listContainer.innerHTML);
