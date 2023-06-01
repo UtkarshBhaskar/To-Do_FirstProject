@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--UTF-8 is the most widely used way to represent Unicode text in web pages-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--<meta name="description" content="This field contains information about your page. It is usually around two sentences long.">.
+        <meta name="author" content="Conor Sheils">-->
+
+        <!--name: This attribute specifies the name of the metadata being defined. In this case, it is set to "viewport".-->
+        <!--content: This attribute specifies the value of the metadata-->
+        <!--width=device-width: This value sets the width of the viewport to the width of the device's screen.-->
+        <!--initial-scale=1.0: This value sets the initial zoom level when the page is first loaded to 1.0, which means no zooming.-->
+        <!--The <meta> tags are used to provide additional information and instructions to the browser about how to handle and display the web page. In this case, the first meta tag ensures compatibility with the latest version of Internet Explorer, while the second meta tag sets the viewport width and initial scale for responsive and mobile-friendly design.-->
+
+
+    <title>To-Do List Project</title>
+
+    <link rel="stylesheet" type="text/css" href="design.css" /> <!--linking with the css file design.css-->
+</head>
+<body>
+    <div class="mainBG"> <!--A container for a block of content-->  <!--the main background where the colour is filled-->
+        <div class="to-doList">                                     <!--the white box which will hold all the output and input elements-->
+            <h1> To-Do List <img src="tickmark.png"> </h1>          <!--heading with the image. the image is stored in the same directory as the html, css and js files-->
+            <div class="bar">                                       <!--input bar-->
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button> <!--addTask() is the function that helps add to-do tasks after the Add button is clicked-->
+            </div>
+            <ul id="ListContents">
+                <!--<li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
+        </div>
+    </div>
+    <script src="linkcode.js"></script> <!--linking with the javascript file linkedcode.js-->
+</body>
+</html>

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    box-shadow:darkslateblue;
+    text-align:left;
+}
+
+.mainBG{
+    width: 100%; /*The width CSS property sets an element's width. By default, it sets the width of the content area, but if box-sizing is set to border-box , it sets the width of the border area.*/
+    min-height: 100vh; /*this occupies 100% of the available height. if there is a change in height from the viewport, this will adjust accordingly and occupy the whole portion.*/ 
+    background: radial-gradient(#13b9d6, #8c14dd);
+    padding: 10px;
+}
+.to-doList{
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px; /* 40 from top, 30 from left and right, 70 from bottom*/
+    border-radius: 10px;
+}
+.to-doList h1{
+    color: #070e2c;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.to-doList h1 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none; /*removes bullets that are usually part of unordered lists*/
+    font-size: 23px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative; /*becomes necessary to have the text after the checkboxes, otherwise will overlap*/
+}
+ul li::before{
+    content: '';
+    position:absolute; /*the absolute position of the check boxes become necessary to hold the boxes according to the padding and margings of the to-doList box.*/
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size:cover; /* could also use contain, works the same in this case*/
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: grey;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: grey;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #2e4c87;
+}
+
+
+
